@@ -1,7 +1,7 @@
 :root{
-    --text-color:#1a1c20
-    --link-color:#4a76ee
-    --background-color:#eeeff1
+    --text-color:#1a1c20;
+    --link-color:#4a76ee;
+    --background-color:#ffffff;
 }
 
 *{
@@ -53,7 +53,7 @@ nav .right a:last-child {
     padding: 5px 15px;
     border-radius: 5px;
 }
-  
+
 nav .right span{
     margin-left: 5px;
 }
@@ -92,7 +92,7 @@ nav .right span{
     margin-right: 10px;
     margin-bottom: 10px;
     transition: 0.1s;
-    
+
 }
 
 .hero-section .text .links a:hover{
@@ -119,17 +119,17 @@ nav .right span{
     padding: 0 50px;
     margin-bottom: 100px;
 }
-  
+
 .skills-section h2 {
     text-align: center;
     font-size: 35px;
 }
-  
+
 .skills-section .text {
     text-align: center;
     margin-bottom: 20px;
 }
-  
+
 .skills-section .cells {
     display: flex;
     justify-content: center;
@@ -227,7 +227,7 @@ nav .right span{
 .contact-section .group .text{
     flex: 3;
     margin-top: 20px;
-    
+
 }
 
 .contact-section .group form{
@@ -346,4 +346,46 @@ nav .right span{
         padding: 0 20px;
     }
 
+}
+
+/* === Dark mode additions (appended, minimal and non-destructive) === */
+:root{
+    --dark-bg: #0d1116;
+    --dark-text: #ffffff;
+}
+
+/* Toggle button style (keeps visual similar to existing design) */
+#theme-toggle {
+    background: transparent;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.15s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--link-color);
+    color: white;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: var(--dark-bg) !important;
+    color: var(--dark-text) !important;
+}
+
+body.dark-mode a {
+    color: var(--dark-text) !important;
+}
+
+body.dark-mode nav .right a:last-child {
+    background-color: var(--dark-text) !important;
+    color: var(--dark-bg) !important;
+}
+
+body.dark-mode #theme-toggle {
+    border-color: var(--dark-text) !important;
+    color: var(--dark-text) !important;
 }
